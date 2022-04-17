@@ -14,15 +14,13 @@ public class ControllerService implements IControllerService {
 	public ControllerRepository controllerRepository;
 
 	@Override
-	public void addController(Controller controller) {
-		// TODO Auto-generated method stub
-		controllerRepository.save(controller);
+	public Controller addController(Controller controller) {
+		return controllerRepository.save(controller);
 	}
 
 	@Override
-	public void updateController(Controller controller) {
-		// TODO Auto-generated method stub
-		controllerRepository.save(controller);
+	public Controller updateController(Controller controller) {
+		return controllerRepository.save(controller);
 
 	}
 

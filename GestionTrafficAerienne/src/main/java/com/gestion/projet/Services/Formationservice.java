@@ -15,15 +15,13 @@ public class Formationservice implements IFormationService {
 	public FormationRepository formationRepository;
 
 	@Override
-	public void addFormation(Formation Formation) {
-		// TODO Auto-generated method stub
-		formationRepository.save(Formation);
+	public Formation addFormation(Formation Formation) {
+		return formationRepository.save(Formation);
 	}
 
 	@Override
-	public void updateFormation(Formation Formation) {
-		// TODO Auto-generated method stub
-		formationRepository.save(Formation);
+	public Formation updateFormation(Formation Formation) {
+		return formationRepository.save(Formation);
 
 		
 	}

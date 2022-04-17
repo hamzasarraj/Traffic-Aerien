@@ -14,15 +14,14 @@ public class AircraftService implements IAircaftService {
 	@Autowired
 	public AircraftRepository aircraftRepository;
 	@Override
-	public void addAircraft(Aircraft Aircraft) {
+	public Aircraft addAircraft(Aircraft Aircraft) {
 		// TODO Auto-generated method stub
-		aircraftRepository.save(Aircraft);
+		return aircraftRepository.save(Aircraft);
 	}
 
 	@Override
-	public void updateAircraft(Aircraft Aircraft) {
-		// TODO Auto-generated method stub
-		aircraftRepository.save(Aircraft);
+	public Aircraft updateAircraft(Aircraft Aircraft) {
+		return aircraftRepository.save(Aircraft);
 	}
 
 	@Override

@@ -14,16 +14,13 @@ public class VolService implements IVolService {
 	public VolRepository volRepository;
 
 	@Override
-	public void addVol(Vol vol) {
-		// TODO Auto-generated method stub
-		volRepository.save(vol);
+	public Vol addVol(Vol vol) {
+		return volRepository.save(vol);
 	}
 
 	@Override
-	public void updateVol(Vol vol) {
-		// TODO Auto-generated method stub
-		volRepository.save(vol)
-		;	}
+	public Vol updateVol(Vol vol) {
+		return volRepository.save(vol);	}
 
 	@Override
 	public void deleteVol(Long id) {

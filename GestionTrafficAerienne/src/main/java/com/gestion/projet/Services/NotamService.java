@@ -15,15 +15,13 @@ public class NotamService implements INotamService {
 	public NotamRepository notamRepository;
 
 	@Override
-	public void addNotam(Notam Notam) {
-		// TODO Auto-generated method stub
-		notamRepository.save(Notam);
+	public Notam addNotam(Notam Notam) {
+		return notamRepository.save(Notam);
 	}
 
 	@Override
-	public void updateNotam(Notam Notam) {
-		// TODO Auto-generated method stub
-		notamRepository.save(Notam);
+	public Notam updateNotam(Notam Notam) {
+		return notamRepository.save(Notam);
 
 	}
 

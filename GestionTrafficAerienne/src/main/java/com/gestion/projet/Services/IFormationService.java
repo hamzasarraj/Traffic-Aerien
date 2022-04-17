@@ -6,8 +6,8 @@ import com.gestion.projet.Entities.Formation;
 
 
 public interface IFormationService {
-	public void addFormation(Formation Formation);
-	public void updateFormation(Formation Formation);
+	Formation addFormation(Formation Formation);
+	Formation updateFormation(Formation Formation);
 	public void deleteFormation(Long id);
 	public Formation getFormation(Long id);
 	public List<Formation> getAllFormations();

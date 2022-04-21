@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.gestion.projet.Entities.Aircraft;
 import com.gestion.projet.Repositories.AircraftRepository;
+
+import lombok.extern.slf4j.Slf4j;
 @Service
+@Slf4j
 public class AircraftService implements IAircaftService {
 
 	@Autowired

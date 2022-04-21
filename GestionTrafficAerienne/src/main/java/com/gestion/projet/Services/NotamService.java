@@ -9,7 +9,10 @@ import org.springframework.stereotype.Service;
 
 import com.gestion.projet.Entities.Notam;
 import com.gestion.projet.Repositories.NotamRepository;
+
+import lombok.extern.slf4j.Slf4j;
 @Service
+@Slf4j
 public class NotamService implements INotamService {
 	@Autowired
 	public NotamRepository notamRepository;

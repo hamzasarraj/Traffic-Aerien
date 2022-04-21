@@ -9,7 +9,10 @@ import org.springframework.stereotype.Service;
 import com.gestion.projet.Entities.Formation;
 import com.gestion.projet.Repositories.FormationRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class Formationservice implements IFormationService {
 	@Autowired
 	public FormationRepository formationRepository;

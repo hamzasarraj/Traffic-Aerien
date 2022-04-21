@@ -16,10 +16,9 @@ import com.gestion.projet.Entities.Formation;
 import com.gestion.projet.Services.IFormationService;
 
 import io.swagger.annotations.ApiOperation;
-import tn.esprit.spring.entities.Client;
 
 @RestController
-@RequestMapping("/Formation")
+@RequestMapping("/formation")
 public class FormationController {
 	@Autowired
 	IFormationService iFormationService;
@@ -31,31 +30,31 @@ public class FormationController {
 	}
 
 	// http://localhost:8089/SpringMVC/client/retrieve-client/8
-	@ApiOperation(value = "Récupérer un client par Id")
-	@GetMapping("/retrieve-client/{client-id}")
+	@ApiOperation(value = "Récupérer une formation par Id")
+	@GetMapping("/retrieve-formation/{formation-id}")
 //	@ApiResponses(value = {
 //			@ApiResponse(code = 200, message = "Success|OK"),
 //			@ApiResponse(code = 401, message = "Not Authorized!"),
 //			@ApiResponse(code = 403, message = "Forbidden!"),
 //			@ApiResponse(code = 404, message = "Not Found!") })
-	public Client retrieveClient(@PathVariable("client-id") Long clientId) {
-		return clientService.retrieveClient(clientId);
+	public Formation retrieveFormation(@PathVariable("Formation-id") Long FormationID) {
+		return iFormationService.getFormation(FormationID);
 	}
 
-	@PostMapping("/add-client")
-	public Client addClient(@RequestBody Client c) {
-		return clientService.addClient(c);
+	@PostMapping("/add-formation")
+	public Formation addFormation(@RequestBody Formation f) {
+		return iFormationService.addFormation(f);
 	}
 
-	// http://localhost:8089/SpringMVC/client/remove-client/{client-id}
-	@DeleteMapping("/remove-client/{client-id}")
-	public void removeClient(@PathVariable("client-id") Long clientId) {
-		clientService.deleteClient(clientId);
+	// http://localhost:8089/SpringMVC/formation/remove-formation/{formation-id}
+	@DeleteMapping("/remove-formation/{formation-id}")
+	public void removeFormation(@PathVariable("formation-id") Long FormationID) {
+		iFormationService.deleteFormation(FormationID);
 	}
 
-	// http://localhost:8089/SpringMVC/client/modify-client
-	@PutMapping("/modify-client")
-	public Client modifyClient(@RequestBody Client client) {
-		return clientService.updateClient(client);
+	// http://localhost:8089/SpringMVC/formation/modify-formation
+	@PutMapping("/modify-formation")
+	public Formation modifyFormation(@RequestBody Formation f) {
+		return  iFormationService.updateFormation(f);
 	}
 }

@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiOperation;
 
 
 @RestController
-@RequestMapping("/User")
+@RequestMapping("/user")
 public class UserController {
 	@Autowired
 	IUserService iUserService;
@@ -30,12 +30,12 @@ public class UserController {
 		List<User> listUser= iUserService.getAllUsers();
 		return listUser;
 	}
-	// http://localhost:8089/SpringMVC/User/retrieve-user/8
+	// http://localhost:8089/SpringMVC/user/retrieve-user/2
 	@GetMapping("/retrieve-user/{user-id}")
 	public User retrieveUser(@PathVariable("user-id") Long UserId) {
 	return iUserService.getUser(UserId);
 	}
-	// http://localhost:8089/SpringMVC/User/remove-user/{user-id}
+	// http://localhost:8089/SpringMVC/user/remove-user/{user-id}
 	@DeleteMapping("/remove-User/{user-id}")
 	public void removeClient(@PathVariable("user-id") Long UsertId) {
 	iUserService.deleteUser(UsertId);

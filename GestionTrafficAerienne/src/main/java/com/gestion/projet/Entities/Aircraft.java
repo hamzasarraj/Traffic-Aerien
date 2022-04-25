@@ -35,7 +35,5 @@ public class Aircraft implements Serializable {
 	@Enumerated(EnumType.STRING)
 	private CategoryAC categoryAC;
 	@OneToOne
-	private Vol Vol;
-	@ManyToMany
-	private Set<User>Users;
+	private Vol vol;
 }

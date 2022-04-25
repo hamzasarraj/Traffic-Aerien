@@ -28,7 +28,5 @@ public class Notam implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long NotamId;
 	@Column(name="description")
-	private String Description;
-	@ManyToOne
-	private Controller controller;
-}
+	private String Description;}
+	

@@ -31,6 +31,6 @@ public class Formation implements Serializable {
 	private String Type;
 	private Date dateFormation;
 	@ManyToOne
-	private Controller Controller;
+	private Controller controller;
 	
 }

@@ -39,10 +39,7 @@ public class User implements Serializable {
 	private String Password;  
 	@Enumerated(EnumType.STRING)
 	private CategoryUser categoryUser;
-	@ManyToMany
-	private Set<Controller> Controllers;
-	@ManyToMany
-	private Set<Aircraft> Aircrafts;
+	
 	public Long getUserId() {
 		return UserId;
 	}
@@ -79,17 +76,7 @@ public class User implements Serializable {
 	public void setCategoryUser(CategoryUser categoryUser) {
 		this.categoryUser = categoryUser;
 	}
-	public Set<Controller> getControllers() {
-		return Controllers;
-	}
-	public void setControllers(Set<Controller> controllers) {
-		Controllers = controllers;
-	}
-	public Set<Aircraft> getAircrafts() {
-		return Aircrafts;
-	}
-	public void setAircrafts(Set<Aircraft> aircrafts) {
-		Aircrafts = aircrafts;
-	}
+	
+	
 	
 }

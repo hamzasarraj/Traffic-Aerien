@@ -31,8 +31,8 @@ public class Vol implements Serializable {
 	private String DepartureAP;
 	private String DestinationAP;
 	private Date DateVol;
-	@ManyToOne
-	private Controller controller;
 	@OneToOne
 	private Aircraft aircraft;
-}
+	@ManyToOne
+	private Controller controller;
+	}
